@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include <DS1307RTC.h>
 #include <LiquidCrystal_I2C.h>
-#include <DHT.h>
+
 
 #define ONE_WIRE_BUS 2
 
@@ -53,7 +53,7 @@ void displayTime(){
 void displayTemp(){
 	temperature = dht.getTemperature();
 	humidity = dht.getHumidity();
-	
+
 	byte iTemp, decTemp, iHum, decHum;
 	iTemp = (byte)temperature;
 	decTemp = (temperature - iTemp) * 100;
